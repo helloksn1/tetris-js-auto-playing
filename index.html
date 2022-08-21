@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #cont {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border: 2px solid black;
+            }
+            @keyframes appear {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            #control_pad {
+                z-index: 10;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 250px;
+                height: 200px;
+                border-radius: 20px;
+                background-color: rgba(0, 0, 0, .1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation-duration: .5s;
+                animation-name: appear;
+            }
+            #score {
+                font-size: 50px;
+                position: absolute;
+                right: -70px;
+                font-weight: bold;
+            }
+            .block {
+                position: absolute;
+                border-radius: 3px;
+                border: none;
+            }
+            .btype0 {
+                background-color: white;
+            }
+            .btype1 {
+                background-color: blue;
+            }
+            .btype2 {
+                background-color: brown;
+            }
+            .btype3 {
+                background-color: yellow;
+            }
+            .btype4 {
+                background-color: green;
+            }
+            .btype5 {
+                background-color: hotpink;
+            }
+            .btype6 {
+                background-color: lightseagreen;
+            }
+            .btype7 {
+                background-color: red;
+            }
+            #start {
+                background-color: red;
+                color: white;
+                font-weight: bold;
+                border-radius: 5px;
+                padding: 3px 10px;
+                margin: 20px;
+            }
+            #score_result {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="control_pad">
+            <div id="score_result"></div><br>
+            <div>
+                <button id="start">开&nbsp;&nbsp;&nbsp;始</button>
+            </div>
+        </div>
+        <div id="cont">
+            <div id="score"></div>
+        </div>
+        <script src="load.js"></script>
+    </body>
+</html>
